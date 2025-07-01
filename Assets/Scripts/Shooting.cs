@@ -23,6 +23,8 @@ public class Shooting : MonoBehaviour
     public CameraShake cs;
     public float camShakeMagnitude, camShakeDuration;
 
+    [SerializeField] GameObject pauseMenu;
+
     Animator anim;
 
     private void Awake()
@@ -60,14 +62,17 @@ public class Shooting : MonoBehaviour
 
     private void MyInput()
     {
-        if (allowButtonHold)
+        if (!pauseMenu.activeInHierarchy)
         {
-            shooting = Input.GetKey(KeyCode.Mouse0);
-        }
+            if (allowButtonHold)
+            {
+                shooting = Input.GetKey(KeyCode.Mouse0);
+            }
 
-        else
-        {
-            shooting = Input.GetKeyDown(KeyCode.Mouse0);
+            else
+            {
+                shooting = Input.GetKeyDown(KeyCode.Mouse0);
+            }
         }
 
         if (readyToShoot && shooting)
