@@ -1,0 +1,11 @@
+Model Information:
+* title:	Call Of Duty: IW C6 Robot Arms
+* source:	https://sketchfab.com/3d-models/call-of-duty-iw-c6-robot-arms-5036b8556ba34257bac1ab159ca320f1
+* author:	QuickDriftVR (https://sketchfab.com/QuickDriftVR)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Call Of Duty: IW C6 Robot Arms" (https://sketchfab.com/3d-models/call-of-duty-iw-c6-robot-arms-5036b8556ba34257bac1ab159ca320f1) by QuickDriftVR (https://sketchfab.com/QuickDriftVR) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
