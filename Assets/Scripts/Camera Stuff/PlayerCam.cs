@@ -16,6 +16,7 @@ public class PlayerCam : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        GetSens();
     }
 
     private void Update()
@@ -32,5 +33,18 @@ public class PlayerCam : MonoBehaviour
         //Camera rotation
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+    }
+
+    public void GetSens()
+    {
+        if (PlayerPrefs.HasKey("sensitiviyX"))
+        {
+            sensX = PlayerPrefs.GetFloat("sensitiviyX");
+        }
+
+        if (PlayerPrefs.HasKey("sensitiviyY"))
+        {
+            sensX = PlayerPrefs.GetFloat("sensitiviyY");
+        }
     }
 }

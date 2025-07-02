@@ -24,6 +24,8 @@ public class Shooting : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
 
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject settingsMenu;
+
 
     Animator anim;
 
@@ -62,7 +64,7 @@ public class Shooting : MonoBehaviour
 
     private void MyInput()
     {
-        if (!pauseMenu.activeInHierarchy)
+        if (!pauseMenu.activeInHierarchy && !settingsMenu.activeInHierarchy)
         {
             if (allowButtonHold)
             {
