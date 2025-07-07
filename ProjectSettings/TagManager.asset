@@ -3,18 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
+  - Enemy Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - whatIsWeapon
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - whatIsPlayer
+  - whatIsWall
+  - whatIsGround
+  - whatIsEnemy
   - 
   - 
   - 

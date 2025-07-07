@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    public float moveSpeed = 10f;
     public float walkSpeed;
     public float sprintSpeed;
     public float slideSpeed;
