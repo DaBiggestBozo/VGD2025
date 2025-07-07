@@ -44011,6 +44011,7 @@ MonoBehaviour:
   camShakeDuration: 0.4
   pauseMenu: {fileID: 1151804901}
   settingsMenu: {fileID: 2014528865}
+  deathScreen: {fileID: 735204611}
 --- !u!114 &1739789862
 MonoBehaviour:
   m_ObjectHideFlags: 0

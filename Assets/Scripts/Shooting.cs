@@ -25,6 +25,8 @@ public class Shooting : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject settingsMenu;
+    [SerializeField] GameObject deathScreen;
+
 
     Animator anim;
 
@@ -73,7 +75,7 @@ public class Shooting : MonoBehaviour
     {
         shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
-        if (!pauseMenu.activeInHierarchy && !settingsMenu.activeInHierarchy)
+        if (!pauseMenu.activeInHierarchy && !settingsMenu.activeInHierarchy && !deathScreen.activeInHierarchy)
         {
             if (allowButtonHold)
             {
@@ -85,7 +87,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if (readyToShoot && shooting && !pauseMenu.activeInHierarchy && !settingsMenu.activeInHierarchy)
+        if (readyToShoot && shooting && !pauseMenu.activeInHierarchy && !settingsMenu.activeInHierarchy && !deathScreen.activeInHierarchy)
         {
             Shoot();
         }
