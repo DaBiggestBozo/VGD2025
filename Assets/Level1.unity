@@ -44700,6 +44700,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 1151804901}
   settingsMenu: {fileID: 2014528865}
   deathScreen: {fileID: 1739029301}
+  player: {fileID: 0}
 --- !u!114 &1739789862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46869,7 +46870,7 @@ PrefabInstance:
     - target: {fileID: 3989393464863020047, guid: 98b6a38b132964c45958472f3cb64a1f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 686757882, guid: c8de53e0258a134458b68bfe7f426962, type: 3}
+      objectReference: {fileID: -1348946239, guid: c46a948f0f73f704382094fe9cb53029, type: 3}
     - target: {fileID: 3989393464863020047, guid: 98b6a38b132964c45958472f3cb64a1f, type: 3}
       propertyPath: m_FillAmount
       value: 1
@@ -46877,7 +46878,7 @@ PrefabInstance:
     - target: {fileID: 4817868010527707094, guid: 98b6a38b132964c45958472f3cb64a1f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 500376321, guid: 72bb4dd7f43bc6f4fbb5706f851e22ee, type: 3}
+      objectReference: {fileID: -2104560445, guid: 260aedfbd34c17c4fa6e3a19aa6a0ddd, type: 3}
     - target: {fileID: 4817868010527707094, guid: 98b6a38b132964c45958472f3cb64a1f, type: 3}
       propertyPath: m_Color.b
       value: 1
