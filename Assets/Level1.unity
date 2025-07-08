@@ -44700,7 +44700,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 1151804901}
   settingsMenu: {fileID: 2014528865}
   deathScreen: {fileID: 1739029301}
-  player: {fileID: 0}
+  player: {fileID: 1872185306}
 --- !u!114 &1739789862
 MonoBehaviour:
   m_ObjectHideFlags: 0
