@@ -29,6 +29,9 @@ public class Shooting : MonoBehaviour
 
     Animator anim;
 
+    public AudioSource Gunshotsource;
+    public AudioClip GunshotSound;
+
     private void Awake()
     {
         readyToShoot = true;
@@ -93,6 +96,8 @@ public class Shooting : MonoBehaviour
 
     public void Shoot()
     {
+        Gunshotsource.PlayOneShot(GunshotSound);
+
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, whatIsEnemy))
         {
             Debug.Log(hit.collider.name);
