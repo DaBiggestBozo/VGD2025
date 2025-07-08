@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 766a7af9237a4f84496e41d8b8e1bfd6
+guid: 879fb59cb2cefed4abfa936f684d996c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GEARBREAK settings menu fixed_0
+      name: ExtraTiles_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
-        width: 192
-        height: 190
+        x: 0
+        y: 137
+        width: 100
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +138,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f400cd60af325e459a0fb4fddba1936
-      internalID: 1635359324
+      spriteID: e336503b9b964a547a892664cf54f514
+      internalID: 1302016344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtraTiles_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 75
+        width: 50
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e765cfb01e01984ca048d9669d6d241
+      internalID: 1715588782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtraTiles_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 25
+        width: 12
+        height: 60
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8947ea7b4b9a8434b9842e9db2e638eb
+      internalID: 1650269424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExtraTiles_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 26
+        width: 12
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe76fa7d81390c4b83cd68134b0c547
+      internalID: 897300941
       vertices: []
       indices: 
       edges: []
@@ -148,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 13c7650710e3e24488e3fcf4d17b9de1
+    spriteID: e85f0522faf2f214aa2375a65531dd1e
     internalID: 0
     vertices: []
     indices: 
@@ -158,7 +224,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GEARBREAK settings menu fixed_0: 1635359324
+      ExtraTiles_0: 1302016344
+      ExtraTiles_1: 1715588782
+      ExtraTiles_2: 1650269424
+      ExtraTiles_3: 897300941
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
