@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.Cinemachine;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -32,13 +33,21 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Kill Player")
+        {
+            KillPlayer();
+        }
+    }
+
     public void DamagePlayer(int damage) //damage is amount of damage to deal
     {
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
 
         if (currentHealth > 0)
         {
-            print("Oof");
+            //Add damage flash?
         }
         else
         {
