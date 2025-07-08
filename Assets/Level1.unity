@@ -46366,10 +46366,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   wallRunForce: 400
   wallJumpUpForce: 18
   wallJumpSideForce: 70
@@ -46408,7 +46408,7 @@ MonoBehaviour:
   rb: {fileID: 1872185307}
   whatIsClimbable:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   pm: {fileID: 1872185309}
   climbSpeed: 17
   maxClimbTime: 0.75
