@@ -19,7 +19,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        currentHealthBar.fillAmount = currentHealth/maxHealth;
+        //currentHealthBar.fillAmount = currentHealth/maxHealth;
+        currentHealthBar.fillAmount = Mathf.Lerp(currentHealthBar.fillAmount, currentHealth / maxHealth, 0.25f);
     }
 
     private void OnTriggerEnter(Collider other)
