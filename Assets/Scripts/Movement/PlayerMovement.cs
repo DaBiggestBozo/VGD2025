@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
     public KeyCode crouchKey = KeyCode.C;
+    private KeyCode walkingSound = KeyCode.W, S, A, D;
+    private KeyCode SlidingSound = KeyCode.LeftControl;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -60,6 +62,17 @@ public class PlayerMovement : MonoBehaviour
     [Header("Camera Management")]
     public float maxWallRunCameraTilt, wallRunCameraTilt;
 
+    [Header("Audio")]
+    public AudioSource source;
+    public AudioSource Jumpsource;
+    public AudioSource Slidingsource;
+    public AudioSource Runningsource;
+    public AudioClip JumpSound;
+    public AudioClip WalkingSound;
+    public AudioClip slidingSound;
+    public AudioClip RunningSound;
+
+
     public MovementState state;
 
     public enum MovementState
@@ -75,8 +88,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Ground Check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        if (Input.GetKeyDown(walkingSound) && !Input.GetKey(KeyCode.LeftShift))
+        {
+            source.clip = WalkingSound;
+            source.Play();
+        }
+
+        if (Input.GetKeyUp(walkingSound) || Input.GetKey(KeyCode.LeftShift) || wallrunning)
+        {
+            source.Stop();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jumpsource.PlayOneShot(JumpSound);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Runningsource.clip = RunningSound;
+            Runningsource.Play();
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift) || wallrunning)
+        {
+            Runningsource.Stop();
+        }
+
+            //Ground Check
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
         if (grounded)
         {
@@ -110,6 +150,11 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jumpsource.PlayOneShot(JumpSound);
+        }
 
         //Jumping
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
@@ -233,6 +278,17 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 desiredMoveSpeed = sprintSpeed;
+            }
+
+            if (sliding)
+            {
+                Slidingsource.clip = slidingSound;
+                Slidingsource.Play();
+            }
+
+            if (!sliding)
+            {
+                Slidingsource.Stop();
             }
         }
 

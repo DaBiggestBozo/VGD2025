@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class WallRunning : MonoBehaviour
 {
@@ -47,6 +48,13 @@ public class WallRunning : MonoBehaviour
     private PlayerMovement pm;
     private Rigidbody rb;
 
+    [Header("Audio")]
+    public AudioSource Jumpsource;
+    public AudioClip JumpSound;
+    public AudioClip WallRunSound;
+    public AudioSource WallRunSource;
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -90,6 +98,7 @@ public class WallRunning : MonoBehaviour
         {
             if (!pm.wallrunning)
             {
+
                 StartWallRun();
             }
 
@@ -120,6 +129,9 @@ public class WallRunning : MonoBehaviour
 
     private void StartWallRun()
     {
+
+        WallRunSource.clip = WallRunSound;
+        WallRunSource.Play();
         if (wallLeft)
         {
             tilt = Mathf.Lerp(tilt, -camTilt, camTiltTime * Time.deltaTime);
@@ -187,6 +199,7 @@ public class WallRunning : MonoBehaviour
         pm.wallrunning = false;
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, fov, wallRunfovTime * Time.deltaTime);
         tilt = Mathf.Lerp(tilt, 0, camTiltTime * Time.deltaTime);
+        WallRunSource.Stop();
     }
 
     private void WallJump()
@@ -195,6 +208,7 @@ public class WallRunning : MonoBehaviour
 
         Vector3 forceToApply = transform.up * wallJumpUpForce + wallNormal * wallJumpSideForce;
 
+        Jumpsource.PlayOneShot(JumpSound);
 
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.AddForce(forceToApply, ForceMode.Impulse);

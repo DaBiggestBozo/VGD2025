@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8de53e0258a134458b68bfe7f426962
+guid: a1f088fbbec44d04cbfdd4d2ff9517a1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Healthbar 1_0
+      name: crosshair_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 106
-        width: 91
-        height: 22
+        x: 3
+        y: 3
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +138,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90fe7eead4d1a2a4b89a877adcd5df4e
-      internalID: 686757882
+      spriteID: f8409ff783e2824478f26f1f9d819d20
+      internalID: -498544511
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f392ef7aa6678b44aa3beafb4c95ec7d
     internalID: 0
     vertices: []
     indices: 
@@ -158,7 +158,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Healthbar 1_0: 686757882
+      crosshair_0: -498544511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
