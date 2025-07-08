@@ -11623,10 +11623,10 @@ MonoBehaviour:
   player: {fileID: 1872185308}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   health: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
@@ -44693,13 +44693,14 @@ MonoBehaviour:
   attackPoint: {fileID: 165296016}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 0
   cs: {fileID: 1823688470}
   camShakeMagnitude: 4
   camShakeDuration: 0.4
   pauseMenu: {fileID: 1151804901}
   settingsMenu: {fileID: 2014528865}
   deathScreen: {fileID: 1739029301}
+  player: {fileID: 0}
 --- !u!114 &1739789862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46222,7 +46223,7 @@ MonoBehaviour:
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   grounded: 0
   playerCam: {fileID: 1823688467}
   orientation: {fileID: 1762501543}

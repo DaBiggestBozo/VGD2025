@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Shooting : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class Shooting : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject settingsMenu;
     [SerializeField] GameObject deathScreen;
+
+    [SerializeField] GameObject player;
 
     Animator anim;
 
@@ -92,7 +95,7 @@ public class Shooting : MonoBehaviour
     }
 
     public void Shoot()
-    {
+    { //need nullproofing
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, whatIsEnemy))
         {
             Debug.Log(hit.collider.name);
@@ -100,6 +103,10 @@ public class Shooting : MonoBehaviour
             if (hit.collider.CompareTag("Enemy"))
             {
                 hit.collider.GetComponent<EnemyAI>().TakeDamage(damage);
+                if (Vector3.Distance(player.transform.position, hit.collider.transform.position) <= 4)
+                {
+                    player.GetComponent<PlayerHealth>().DamagePlayer(-11); //heal player
+                }
             }
         }
 
