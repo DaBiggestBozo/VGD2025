@@ -44693,7 +44693,7 @@ MonoBehaviour:
   attackPoint: {fileID: 165296016}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 0
   cs: {fileID: 1823688470}
   camShakeMagnitude: 4
   camShakeDuration: 0.4
