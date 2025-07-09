@@ -19,9 +19,12 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void  Restart()
+    public void Restart()
     {
         Time.timeScale = 1;
+        PlayerPrefs.SetString("Respawning", "true");
+        PlayerPrefs.Save();
+        print(PlayerPrefs.GetString("Respawning"));
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Re-load the current scene
     }
 
