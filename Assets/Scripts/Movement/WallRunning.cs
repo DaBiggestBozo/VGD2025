@@ -208,9 +208,9 @@ public class WallRunning : MonoBehaviour
 
         Vector3 forceToApply = transform.up * wallJumpUpForce + wallNormal * wallJumpSideForce;
 
-        Jumpsource.PlayOneShot(JumpSound);
-
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.AddForce(forceToApply, ForceMode.Impulse);
+
+        Jumpsource.PlayOneShot(JumpSound);
     }
 }

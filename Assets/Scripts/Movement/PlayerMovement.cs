@@ -88,6 +88,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Slidingsource.clip = slidingSound;
+            Slidingsource.Play();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            Slidingsource.Stop();
+        }
+
+
         if (Input.GetKeyDown(walkingSound) && !Input.GetKey(KeyCode.LeftShift))
         {
             source.clip = WalkingSound;
@@ -278,12 +289,6 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 desiredMoveSpeed = sprintSpeed;
-            }
-
-            if (sliding)
-            {
-                Slidingsource.clip = slidingSound;
-                Slidingsource.Play();
             }
 
             if (!sliding)
