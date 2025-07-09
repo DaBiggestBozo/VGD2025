@@ -18,7 +18,6 @@ public class WallRunning : MonoBehaviour
     [SerializeField] private float wallRunfov;
     [SerializeField] private float wallRunfovTime;
     [SerializeField] private float camTilt;
-    [SerializeField] private float camTiltTime;
 
     public float tilt;
 
@@ -53,7 +52,6 @@ public class WallRunning : MonoBehaviour
     public AudioClip JumpSound;
     public AudioClip WallRunSound;
     public AudioSource WallRunSource;
-
 
     private void Start()
     {
@@ -134,15 +132,17 @@ public class WallRunning : MonoBehaviour
         WallRunSource.Play();
         if (wallLeft)
         {
-            tilt = Mathf.Lerp(tilt, -camTilt, camTiltTime * Time.deltaTime);
+            //tilt = Mathf.Lerp(tilt, -camTilt, camTiltTime * Time.deltaTime);
+            tilt = -camTilt;
         }
 
         else if (wallRight)
         {
-            tilt = Mathf.Lerp(tilt, camTilt, camTiltTime * Time.deltaTime);
+            //tilt = Mathf.Lerp(tilt, camTilt, camTiltTime * Time.deltaTime);
+            tilt = camTilt;
         }
 
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, wallRunfov, wallRunfovTime * Time.deltaTime);
+        //cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, wallRunfov, wallRunfovTime * Time.deltaTime);
 
         pm.wallrunning = true;
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
@@ -197,8 +197,8 @@ public class WallRunning : MonoBehaviour
         //fov = 90f;
         tilt = 0f;
         pm.wallrunning = false;
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, fov, wallRunfovTime * Time.deltaTime);
-        tilt = Mathf.Lerp(tilt, 0, camTiltTime * Time.deltaTime);
+        //cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, fov, wallRunfovTime * Time.deltaTime);
+        //tilt = Mathf.Lerp(tilt, 0, camTiltTime * Time.deltaTime);
         WallRunSource.Stop();
     }
 
