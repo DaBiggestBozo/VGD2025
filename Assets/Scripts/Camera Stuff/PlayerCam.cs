@@ -11,8 +11,12 @@ public class PlayerCam : MonoBehaviour
 
     public Transform orientation;
 
-    float xRotation;
-    float yRotation;
+    private float xRotation;
+    private float yRotation;
+
+    private float tiltInterpolate;
+
+    [SerializeField] private float tiltSpeed = 0.2;
 
     private void Start()
     {
@@ -31,12 +35,11 @@ public class PlayerCam : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
+        tiltInterpolate = Mathf.LerpAngle(tiltInterpolate, wallrun.tilt, tiltSpeed);
+
         //Camera rotation
-        if (wallrun)
-        {
-            transform.rotation = Quaternion.Euler(xRotation, yRotation, wallrun.tilt);
-            orientation.transform.rotation = Quaternion.Euler(0, yRotation, 0);
-        }
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, tiltInterpolate);
+        orientation.transform.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 
     public void GetSens()
