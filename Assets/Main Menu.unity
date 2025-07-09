@@ -265,8 +265,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25805082}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &67636564
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +539,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70511507}
   m_CullTransparentMesh: 1
->>>>>>> 52db2eef82f3fc720f256fee87fdbcf4a95dc573
 --- !u!1 &76308021
 GameObject:
   m_ObjectHideFlags: 0
