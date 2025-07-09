@@ -15,6 +15,9 @@ public class PlayerHealth : MonoBehaviour
     public Vector3 spawnRotation; //Spawn angle
     public Vector3 defaultSpawnLocation; //set in inspector
 
+    [SerializeField] private AudioSource deathSource;
+    [SerializeField] private AudioClip deathSound;
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -82,5 +85,6 @@ public class PlayerHealth : MonoBehaviour
         Cursor.visible = true;
         Time.timeScale = 0;
         DeathScreen.SetActive(true);
+        deathSource.PlayOneShot(deathSound);
     }
 }
