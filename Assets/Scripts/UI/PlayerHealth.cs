@@ -2,19 +2,41 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.Cinemachine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 100;
-    [SerializeField] private float currentHealth = 100;
+    public float maxHealth = 100;
+    public float currentHealth = 100;
     [SerializeField] private Image totalHealthBar;
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private GameObject DeathScreen;
+    public Vector3 spawnLocation; //Change this to change default spawn location
+    public Vector3 spawnRotation; //Spawn angle
+    public Vector3 defaultSpawnLocation; //set in inspector
 
     private void Awake()
     {
         currentHealth = maxHealth;
         totalHealthBar.fillAmount = maxHealth;
+        spawnLocation = defaultSpawnLocation;
+
+        if(PlayerPrefs.GetString("Respawning") == "true")
+        {
+            spawnLocation = new Vector3(PlayerPrefs.GetFloat("Checkpoint X"), PlayerPrefs.GetFloat("Checkpoint Y"), PlayerPrefs.GetFloat("Checkpoint Z"));
+            spawnRotation = new Vector3(PlayerPrefs.GetFloat("Checkpoint Rotation X"), PlayerPrefs.GetFloat("Checkpoint Rotation Y"), PlayerPrefs.GetFloat("Checkpoint Rotation Z"));
+            PlayerPrefs.SetString("Respawning", "false");
+        } else
+        {
+            spawnLocation = defaultSpawnLocation;
+            PlayerPrefs.SetFloat("Checkpoint X", defaultSpawnLocation.x);
+            PlayerPrefs.SetFloat("Checkpoint Y", defaultSpawnLocation.y);
+            PlayerPrefs.SetFloat("Checkpoint Z", defaultSpawnLocation.z);
+        }
+    }
+    private void Start()
+    {
+        transform.position = spawnLocation;
     }
 
     private void Update()
@@ -32,13 +54,21 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Kill Player")
+        {
+            KillPlayer();
+        }
+    }
+
     public void DamagePlayer(int damage) //damage is amount of damage to deal
     {
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
 
         if (currentHealth > 0)
         {
-            print("Oof");
+            //Add damage flash?
         }
         else
         {
