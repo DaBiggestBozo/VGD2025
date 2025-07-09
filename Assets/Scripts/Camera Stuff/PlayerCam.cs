@@ -16,7 +16,7 @@ public class PlayerCam : MonoBehaviour
 
     private float tiltInterpolate;
 
-    [SerializeField] private float tiltSpeed = 0.2;
+    [SerializeField] private float tiltSpeed = 0.2f;
 
     private void Start()
     {
