@@ -20917,7 +20917,8 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: e8afc4d0eeb107847bc1282124d499c9, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e8afc4d0eeb107847bc1282124d499c9, type: 3}
       insertIndex: -1
@@ -51192,8 +51193,8 @@ Transform:
   m_Children:
   - {fileID: 71070487}
   - {fileID: 1762501543}
-  - {fileID: 1830436913}
   - {fileID: 554201907}
+  - {fileID: 1830436913}
   m_Father: {fileID: 419822073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1823688468
@@ -51921,7 +51922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bb41b9f89f57a14bbcf6d0a59a5e273, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.49500015
+      value: -0.495
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bb41b9f89f57a14bbcf6d0a59a5e273, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51929,7 +51930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bb41b9f89f57a14bbcf6d0a59a5e273, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.2180005
+      value: -19.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bb41b9f89f57a14bbcf6d0a59a5e273, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54947,7 +54948,7 @@ MonoBehaviour:
   priority: 0
   customPasses:
   - rid: 6161398354894651595
-  injectionPoint: 3
+  injectionPoint: 2
   m_TargetCamera: {fileID: 1830436916}
   useTargetCamera: 1
   references:
