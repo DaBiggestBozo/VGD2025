@@ -15293,10 +15293,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 415650981}
+    - target: {fileID: 2261000953498346890, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1872185306}
     - target: {fileID: 2276924112588874332, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 415650981}
+    - target: {fileID: 3581791773873261076, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1872185306}
     - target: {fileID: 3976941375958409662, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -15341,6 +15349,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4716042111780563129, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1872185306}
     - target: {fileID: 5057013445285886475, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -15349,6 +15361,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 285149319}
+    - target: {fileID: 6867019552978817391, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1872185306}
+    - target: {fileID: 7694638635327396831, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1872185306}
+    - target: {fileID: 7981690487178745492, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1872185306}
+    - target: {fileID: 7990186959156616878, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1872185306}
     - target: {fileID: 8828058077341091090, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: m_Name
       value: Level
