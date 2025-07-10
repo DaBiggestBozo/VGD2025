@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
             source.Stop();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && grounded && CompareTag("Ground"))
         {
             Jumpsource.PlayOneShot(JumpSound);
         }
