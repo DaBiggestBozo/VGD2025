@@ -45,7 +45,7 @@ public class Shooting : MonoBehaviour
     {
         MyInput();
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !hit.collider.CompareTag("Enemy") && !pauseMenu.activeInHierarchy && !settingsMenu.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !pauseMenu.activeInHierarchy && !settingsMenu.activeInHierarchy)
         {
             BulletHoleImpact();
         }
@@ -134,13 +134,27 @@ public class Shooting : MonoBehaviour
 
     private void BulletHoleImpact()
     {
-        GameObject impact = Instantiate(bulletHoleGraphic, hit.point, Quaternion.LookRotation(hit.normal));
+        if (hit.collider.CompareTag("Enemy"))
+        {
+            GameObject impac = Instantiate(bulletHoleGraphic, hit.point, Quaternion.LookRotation(hit.normal));
 
-        Vector3 forwardVector = impact.transform.forward;
+            Vector3 forwardVecto = impac.transform.forward;
 
-        impact.transform.Translate(forwardVector * 0.1f, Space.World);
+            impac.transform.Translate(forwardVecto * 0.1f, Space.World);
 
-        Destroy(impact, 15f);
+            Destroy(impac, 0.3f);
+        }
+
+       if (!hit.collider.CompareTag("Enemy"))
+        {
+            GameObject impact = Instantiate(bulletHoleGraphic, hit.point, Quaternion.LookRotation(hit.normal));
+
+            Vector3 forwardVector = impact.transform.forward;
+
+            impact.transform.Translate(forwardVector * 0.1f, Space.World);
+
+            Destroy(impact, 15f);
+        }
     }
 
     private void ResetShot()
