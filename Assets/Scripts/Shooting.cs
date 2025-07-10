@@ -143,9 +143,7 @@ public class Shooting : MonoBehaviour
             impac.transform.Translate(forwardVecto * 0.1f, Space.World);
 
             Destroy(impac, 0.3f);
-        }
-
-       if (!hit.collider.CompareTag("Enemy"))
+        } else
         {
             GameObject impact = Instantiate(bulletHoleGraphic, hit.point, Quaternion.LookRotation(hit.normal));
 
