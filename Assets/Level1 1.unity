@@ -18041,27 +18041,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c59be0101b08af44aa12bca4a0019391, type: 3}
   m_PrefabInstance: {fileID: 1343313428}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &736255298
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736255297}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 4.5478854, z: 2.6165051}
-  m_Center: {x: 0, y: -0.5231911, z: -0.25310525}
 --- !u!114 &736255299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18113,8 +18092,8 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 3
   m_ObstacleAvoidanceType: 4
---- !u!154 &736255302
-TerrainCollider:
+--- !u!136 &736255304
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -18128,11 +18107,14 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 0}
-  m_EnableTreeColliders: 1
+  m_Radius: 1.4814774
+  m_Height: 2.9629548
+  m_Direction: 1
+  m_Center: {x: -0.98147726, y: 0.5999111, z: 0}
 --- !u!1 &741713619
 GameObject:
   m_ObjectHideFlags: 0
@@ -22978,7 +22960,7 @@ MonoBehaviour:
   - {fileID: 1261447398}
   - {fileID: 1737772906}
   spawnablePrefabs:
-  - {fileID: 408029272}
+  - {fileID: 736255297}
   spawnNumber: 5
   spawnedObjects: []
   ofs: 1
@@ -24141,6 +24123,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c59be0101b08af44aa12bca4a0019391, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1790183945725220954, guid: c59be0101b08af44aa12bca4a0019391, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -24205,10 +24191,7 @@ PrefabInstance:
       addedObject: {fileID: 736255299}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c59be0101b08af44aa12bca4a0019391, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 736255298}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c59be0101b08af44aa12bca4a0019391, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 736255302}
+      addedObject: {fileID: 736255304}
   m_SourcePrefab: {fileID: 100100000, guid: c59be0101b08af44aa12bca4a0019391, type: 3}
 --- !u!1 &1355552226
 GameObject:
