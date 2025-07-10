@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) /*&& (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)*/)
         {
             Slidingsource.clip = slidingSound;
             Slidingsource.Play();
@@ -110,18 +110,13 @@ public class PlayerMovement : MonoBehaviour
             source.Stop();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded && CompareTag("Ground"))
-        {
-            Jumpsource.PlayOneShot(JumpSound);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround))
+        if (Input.GetKey(KeyCode.LeftShift) && (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f) && !(Runningsource.isPlaying && Runningsource.clip == RunningSound))
         {
             Runningsource.clip = RunningSound;
             Runningsource.Play();
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift) || wallrunning)
+        if (Input.GetKeyUp(KeyCode.LeftShift) || wallrunning || (Input.GetAxisRaw("Horizontal") == 0f && Input.GetAxisRaw("Vertical") == 0f))
         {
             Runningsource.Stop();
         }
@@ -133,11 +128,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearDamping = groundDrag;
         }
-
         else
         {
             rb.linearDamping = 4;
         }
+
+        print(grounded);
 
         MyInput();
         SpeedControl();
@@ -162,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             Jumpsource.PlayOneShot(JumpSound);
         }

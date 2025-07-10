@@ -46617,7 +46617,7 @@ MonoBehaviour:
   timeBetweenShots: 0
   magSize: 65466
   bulletsPerTap: 1
-  allowButtonHold: 1
+  allowButtonHold: 0
   muzzleFlash: {fileID: 8930982608057461884, guid: 9e35c9bdebb2b5845a6b54323ca14069, type: 3}
   bulletHoleGraphic: {fileID: 4139029595544819539, guid: 3140585ddc463954db29e1c5fc6bbb21, type: 3}
   Gun: {fileID: 1739789858}
