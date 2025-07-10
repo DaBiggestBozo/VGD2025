@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             Jumpsource.PlayOneShot(JumpSound);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround))
         {
             Runningsource.clip = RunningSound;
             Runningsource.Play();
