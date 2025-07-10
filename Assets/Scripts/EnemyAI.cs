@@ -124,7 +124,7 @@ public class EnemyAI : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            Invoke(nameof(DestoryEnemy), 0.5f);
+            Invoke(nameof(DestoryEnemy), 0.3f);
         }
     }
 
