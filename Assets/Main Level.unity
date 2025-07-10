@@ -10902,7 +10902,7 @@ PrefabInstance:
       objectReference: {fileID: 1978744932}
     - target: {fileID: 2026813316928774625, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: m_VersionIndex
-      value: 1161
+      value: 1338
       objectReference: {fileID: 0}
     - target: {fileID: 2261000953498346890, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: playerObject
@@ -10974,7 +10974,7 @@ PrefabInstance:
       objectReference: {fileID: 1582480086}
     - target: {fileID: 5343327608509079609, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: m_VersionIndex
-      value: 1161
+      value: 1338
       objectReference: {fileID: 0}
     - target: {fileID: 6867019552978817391, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: playerObject
