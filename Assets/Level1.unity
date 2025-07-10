@@ -15301,6 +15301,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 415650981}
+    - target: {fileID: 2026813316928774625, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: m_VersionIndex
+      value: 1161
+      objectReference: {fileID: 0}
     - target: {fileID: 2261000953498346890, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: playerObject
       value: 
@@ -15385,6 +15389,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 285149319}
+    - target: {fileID: 5343327608509079609, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
+      propertyPath: m_VersionIndex
+      value: 1161
+      objectReference: {fileID: 0}
     - target: {fileID: 6867019552978817391, guid: f4ffb7ded238f8e4393456fa25e1eca3, type: 3}
       propertyPath: playerObject
       value: 
