@@ -16,6 +16,6 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadSceneAsync(2); //credits are scene 2
+        SceneManager.LoadSceneAsync(2); //credits are scene 2 //swapping to prefab in both scenes now
     }
 }
